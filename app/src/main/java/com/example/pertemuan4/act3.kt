@@ -1,6 +1,7 @@
 package com.example.pertemuan4
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -16,6 +17,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.scale
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -65,12 +68,32 @@ fun ActivityPertama(modifier: Modifier = Modifier){
                 Spacer(modifier = Modifier.width(10.dp))
                 Column {
                     Text(
-                        text = "Sulthan Awaliya Firmansyah",
+                        stringResource(id ="Sulthan Awaliya Firmansyah"),
                         fontSize = 22.sp,
                         fontFamily = FontFamily.Cursive,
-                        fontWeight = FontWeight.Bold
+                        fontWeight = FontWeight.Bold,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 15.dp)
+                    )
+                    Text(
+                        stringResource(id=R.string.alamat),
+                        fontSize = 20.sp,
+                        color = Color.Yellow,
+                        modifier = Modifier.padding(top = 10.dp)
                     )
                 }
+            }
+        }
+        Row() {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+            ){
+                Text(
+                    stringResource(id = R.string.copy),
+                    modifier = Modifier
+                        .align (Alignment.BottomCenter)
+                )
             }
         }
     }
