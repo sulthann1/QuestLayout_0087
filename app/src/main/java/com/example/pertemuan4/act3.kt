@@ -68,7 +68,7 @@ fun ActivityPertama(modifier: Modifier = Modifier){
                 Spacer(modifier = Modifier.width(10.dp))
                 Column {
                     Text(
-                        stringResource(id ="Sulthan Awaliya Firmansyah"),
+                        stringResource(id = R.string.nama),
                         fontSize = 22.sp,
                         fontFamily = FontFamily.Cursive,
                         fontWeight = FontWeight.Bold,
@@ -93,6 +93,7 @@ fun ActivityPertama(modifier: Modifier = Modifier){
                     stringResource(id = R.string.copy),
                     modifier = Modifier
                         .align (Alignment.BottomCenter)
+                        .padding(bottom = 50.dp)
                 )
             }
         }
